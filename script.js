@@ -1,27 +1,25 @@
-// 🌗 Time-based theme
+// Auto theme (time-based)
 const hour = new Date().getHours();
-if (hour >= 18 || hour < 6) {
-  document.body.classList.add("dark");
+if (hour >= 6 && hour < 18) {
+  document.body.classList.add("light");
 }
 
-// 🎛️ Toggle Dark Mode
+// Toggle theme
 function toggleDarkMode() {
-  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
 }
 
-// ♿ Accessibility Mode
+// Accessibility mode
 function toggleAccessibility() {
   document.body.classList.toggle("accessibility");
 }
 
-// 📱 Device detection
+// Device detection
 function detectDevice() {
-  const text = document.getElementById("deviceType");
-  if (window.innerWidth < 768) {
-    text.innerText = "📱 Mobile View";
-  } else {
-    text.innerText = "💻 Desktop View";
-  }
+  const el = document.getElementById("deviceType");
+  el.innerText = window.innerWidth < 768 
+    ? "📱 Mobile View Active" 
+    : "💻 Desktop View Active";
 }
 
 detectDevice();
