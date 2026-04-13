@@ -3,35 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adaptive Responsive UI</title>
+  <title>Adaptive UI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Adaptive Responsive Interface</h1>
-    <p>Context-Aware & User-Centric Design</p>
-  </header>
+  <div class="container">
 
-  <section class="controls">
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    <button onclick="toggleAccessibility()">Accessibility Mode</button>
-  </section>
+    <header>
+      <h1>Adaptive UI System</h1>
+      <p>Context-Aware • Responsive • Accessible</p>
+    </header>
 
-  <section class="info">
-    <h2 id="deviceType"></h2>
-  </section>
+    <div class="controls">
+      <button onclick="toggleDarkMode()">🌙 Theme</button>
+      <button onclick="toggleAccessibility()">♿ Accessibility</button>
+    </div>
 
-  <section class="features">
-    <div class="card"> Mobile-First Layout</div>
-    <div class="card"> Time-Based Theme</div>
-    <div class="card"> Accessibility Mode</div>
-    <div class="card"> User Customization</div>
-  </section>
+    <div class="status" id="deviceType"></div>
 
-  <footer>
-    <p> /p>
-  </footer>
+    <section class="cards">
+      <div class="card"> Mobile First</div>
+      <div class="card"> Time Awareness</div>
+      <div class="card"> Accessibility</div>
+      <div class="card"> Adaptive UI</div>
+    </section>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
