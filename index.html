@@ -3,85 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhancing Website Responsiveness</title>
+  <title>Adaptive Responsive UI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">RWD</div>
-  <nav id="nav-menu">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#problem">Problem</a></li>
-      <li><a href="#solution">Solutions</a></li>
-      <li><a href="#benefits">Benefits</a></li>
-    </ul>
-  </nav>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</header>
+  <header>
+    <h1>Adaptive Responsive Interface</h1>
+    <p>Context-Aware & User-Centric Design</p>
+  </header>
 
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Enhancing Website Responsiveness</h1>
-    <p>Mobile-First. Adaptive. High Performance.</p>
-  </div>
+  <section class="controls">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button onclick="toggleAccessibility()">Accessibility Mode</button>
+  </section>
 
-  <div class="hero-image">
-  <img src="./hero.jpg"
-       alt="Responsive Design"
-       loading="lazy">
-</div>
+  <section class="info">
+    <h2 id="deviceType"></h2>
+  </section>
 
-</section>
+  <section class="features">
+    <div class="card">📱 Mobile-First Layout</div>
+    <div class="card">🌗 Time-Based Theme</div>
+    <div class="card">♿ Accessibility Mode</div>
+    <div class="card">🎛️ User Customization</div>
+  </section>
 
-<section id="problem" class="section">
-  <h2>Problem Statement</h2>
-  <div class="grid-4">
-    <div class="card">Layout Breaks</div>
-    <div class="card">Poor Navigation</div>
-    <div class="card">Slow Load Time</div>
-    <div class="card">High Bounce Rate</div>
-  </div>
-</section>
+  <footer>
+    <p>Built using HTML, CSS, JS | Responsive & Adaptive</p>
+  </footer>
 
-<section id="solution" class="section light">
-  <h2>Proposed Solutions</h2>
-  <div class="solutions">
-    <div class="solution">
-      <h3>Responsive Web Design</h3>
-      <p>Flexible grids, media queries & scalable units.</p>
-    </div>
-    <div class="solution">
-      <h3>Mobile-First</h3>
-      <p>Base layout for mobile, enhancements for larger screens.</p>
-    </div>
-    <div class="solution">
-      <h3>Optimized Media</h3>
-      <p>Lazy loading & responsive images improve performance.</p>
-    </div>
-    <div class="solution">
-      <h3>Performance Optimization</h3>
-      <p>Minified assets & optimized CSS/JS for faster rendering.</p>
-    </div>
-  </div>
-</section>
-
-<section id="benefits" class="section">
-  <h2>Expected Benefits</h2>
-  <ul class="benefit-list">
-    <li>Consistent cross-device experience</li>
-    <li>Improved SEO ranking </li>
-    <li>Better engagement </li>
-    <li>Reduced bounce rate</li>
-  </ul>
-</section>
-
-<footer>
-  <p>© 2026 | Responsive Web Design Project</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
