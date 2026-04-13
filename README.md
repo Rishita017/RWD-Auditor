@@ -1,118 +1,66 @@
-# Website-responsiveness
+# RWD Auditor 🔍
 
+> AI-powered website quality analyzer — built for Responsive Web Design evaluation
 
+RWD Auditor takes any website URL and gives it a score out of 100, evaluated across 5 key dimensions of modern web design, backed by real UX research and RWD principles.
 
-Project Overview
+## ✨ Features
 
-This project demonstrates the implementation of **Responsive Web Design (RWD)** principles to ensure seamless adaptability of a website across mobile phones, tablets, laptops, and desktops.
+- **AI-Powered Analysis** via Claude AI
+- **5 Category Scoring**: Responsive Design, Typography, Page Structure, Performance, UX & Retention
+- **Animated Score Ring** with letter grade (A+ to F)
+- **Issue Breakdown** per category with severity indicators
+- **Research-Backed** — Nielsen Norman Group, Google Core Web Vitals, WCAG 2.2, W3C RWD, Baymard Institute
+- **Fully Responsive** design (of course!)
 
-The website is built using a **mobile-first approach**, modern CSS techniques (Flexbox, Grid, Media Queries), and performance optimization strategies to deliver a consistent and high-quality user experience across devices.
+## 🚀 Live Demo
 
+👉 [View on GitHub Pages](https://yourusername.github.io/rwd-auditor)
 
+## 🛠 Tech Stack
 
-Problem Statement
+- Pure HTML, CSS, JavaScript — no frameworks
+- Claude AI API (Anthropic)
+- Google Fonts (Syne + DM Mono + DM Sans)
+- CSS animations & SVG ring chart
 
-Traditional websites often fail to adjust properly across varying screen sizes, leading to:
+## 📦 Setup & GitHub Pages Deployment
 
-* Misaligned layouts
-* Overlapping content
-* Poor mobile navigation
-* Slow loading performance
-* High bounce rates
+1. **Fork or clone** this repository
+2. Go to your repo → **Settings → Pages**
+3. Set source to `main` branch, `/ (root)` folder
+4. Your site will be live at `https://yourusername.github.io/rwd-auditor`
 
-This project addresses these issues using modern responsive development standards.
-  Solution Approach
+> Note: The Claude AI API key is handled via Anthropic's browser proxy. No backend needed.
 
-The website implements the following key techniques:
-
- 1. Mobile-First Design
-
-* Base layout built for small screens
-* Progressive enhancements for tablets and desktops
-* Media query breakpoints at 768px and 1024px
-
- 2. Flexible Layout System
-
-* **CSS Grid** for responsive section structures
-* **Flexbox** for adaptive content arrangement
-* Relative units (rem, %, clamp, vw)
-
- 3. Responsive Navigation
-
-* Collapsible hamburger menu for mobile
-* Horizontal navigation for larger screens
-* Smooth transition using class-based toggling
-
-4. Optimized Media
-
-* `<picture>` element for responsive images
-* `loading="lazy"` for performance optimization
-* Scalable images with max-width handling
-
- 5. Performance Optimization
-
-* Lightweight structure
-* External CSS & JavaScript
-* Clean semantic HTML
-* No unnecessary frameworks
-
----
-
- Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript
-* CSS Flexbox
-* CSS Grid
-* Media Queries
-* Responsive Typography
-
----
-
-## 📂 Project Structure
+## 📁 File Structure
 
 ```
-responsive-website/
-│
-├── index.html
-├── style.css
-├── script.js
-└── assets/
-    └── images/
+rwd-auditor/
+├── index.html    # Main page structure
+├── style.css     # All styles & animations
+├── app.js        # Claude AI integration & logic
+└── README.md     # This file
 ```
 
----
+## 📊 Scoring Criteria
 
- Responsive Features
+| Category | What's Analyzed |
+|----------|----------------|
+| Responsive Design | Mobile-friendliness, viewport meta, fluid grids, media queries |
+| Typography & Readability | Font sizes, line height, contrast, readability score |
+| Page Structure & Hierarchy | HTML semantics, heading order, nav clarity, content organization |
+| Load Speed & Performance | Resource optimization, render-blocking, image handling |
+| UX & User Retention | CTA clarity, navigation UX, cognitive load, engagement signals |
 
-| Device  | Behavior                                  |
-| ------- | ----------------------------------------- |
-| Mobile  | Single-column layout, collapsible menu    |
-| Tablet  | 2-column grid layout                      |
-| Desktop | 4-column grid layout                      |
-| All     | Adaptive typography & flexible containers |
+## 🎓 Research Sources
 
----
-
- Key Outcomes
-
-* Fully responsive layout across devices
-* Improved user experience
-* Consistent cross-platform design
-* Reduced layout breakage
-* Modern UI structure following web standards
+- [Nielsen Norman Group](https://www.nngroup.com/)
+- [Google Core Web Vitals](https://web.dev/vitals/)
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- [W3C RWD Standards](https://www.w3.org/standards/webdesign/mobilweb)
+- [Baymard Institute UX Research](https://baymard.com/)
 
 ---
 
- Concept References
-
-Responsive Web Design concept introduced by Ethan Marcotte
-Media Queries defined by World Wide Web Consortium
-Mobile-first indexing promoted by Google
-
----
-
-
-
-
+Built with ❤️ using Claude AI
