@@ -15,7 +15,7 @@ RWD Auditor takes any website URL and gives it a score out of 100, evaluated acr
 
 ##  Live Demo
 
- [View on GitHub Pages](https://yourusername.github.io/rwd-auditor)
+ [View on GitHub Pages](https://rishita017.github.io/RWD-Auditor/)
 
 ##  Tech Stack
 
