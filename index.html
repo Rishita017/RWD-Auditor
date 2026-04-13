@@ -1,37 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adaptive UI</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RWD Auditor — Website Quality Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="container">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
 
-    <header>
-      <h1>Adaptive UI System</h1>
-      <p>Context-Aware • Responsive • Accessible</p>
-    </header>
+  <nav>
+    <div class="logo"><span class="logo-bracket">[</span>RWD<span class="logo-accent">Auditor</span><span class="logo-bracket">]</span></div>
+    <div class="nav-tag">Powered by Claude AI</div>
+  </nav>
 
-    <div class="controls">
-      <button onclick="toggleDarkMode()"> Theme</button>
-      <button onclick="toggleAccessibility()"> Accessibility</button>
+  <section class="hero">
+    <div class="hero-eyebrow">Research-Backed Website Analysis</div>
+    <h1 class="hero-title">Is your website<br/><span class="gradient-text">really</span> responsive?</h1>
+    <p class="hero-sub">Paste any URL and get an AI-powered audit against RWD principles, UX research, and retention-optimized design patterns.</p>
+
+    <div class="input-wrapper">
+      <span class="input-icon">⌁</span>
+      <input type="text" id="urlInput" placeholder="https://yourwebsite.com" autocomplete="off" spellcheck="false" />
+      <button id="auditBtn" onclick="startAudit()">
+        <span class="btn-text">Audit Now</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+    <div class="input-hint">Try: apple.com · wikipedia.org · any site you're curious about</div>
+
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Categories</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">25+</span><span class="stat-label">RWD Signals</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Powered Analysis</span></div>
+    </div>
+  </section>
+
+  <section class="loading-section" id="loadingSection" style="display:none">
+    <div class="loading-card">
+      <div class="loading-spinner"></div>
+      <div class="loading-status" id="loadingStatus">Initializing audit...</div>
+      <div class="loading-bar-wrap"><div class="loading-bar" id="loadingBar"></div></div>
+    </div>
+  </section>
+
+  <section class="results-section" id="resultsSection" style="display:none">
+
+    <div class="results-header">
+      <div class="audited-url" id="auditedUrl"></div>
+      <button class="re-audit-btn" onclick="resetAudit()">← New Audit</button>
     </div>
 
-    <div class="status" id="deviceType"></div>
+    <div class="score-hero">
+      <div class="score-ring-wrap">
+        <svg class="score-ring" viewBox="0 0 200 200">
+          <circle class="ring-bg" cx="100" cy="100" r="82"/>
+          <circle class="ring-fill" id="ringFill" cx="100" cy="100" r="82" stroke-dasharray="515" stroke-dashoffset="515"/>
+        </svg>
+        <div class="score-inner">
+          <div class="score-number" id="scoreNumber">0</div>
+          <div class="score-grade" id="scoreGrade">—</div>
+          <div class="score-label">/ 100</div>
+        </div>
+      </div>
+      <div class="score-meta">
+        <div class="score-verdict" id="scoreVerdict"></div>
+        <div class="score-summary" id="scoreSummary"></div>
+        <div class="score-badges" id="scoreBadges"></div>
+      </div>
+    </div>
 
-    <section class="cards">
-      <div class="card"> Mobile First</div>
-      <div class="card"> Time Awareness</div>
-      <div class="card"> Accessibility</div>
-      <div class="card"> Adaptive UI</div>
-    </section>
+    <div class="categories-title">Detailed Breakdown</div>
+    <div class="categories-grid" id="categoriesGrid"></div>
 
-  </div>
+    <div class="research-footer">
+      <div class="research-title">Analysis backed by</div>
+      <div class="research-sources">
+        <span>Nielsen Norman Group</span>
+        <span>Google Core Web Vitals</span>
+        <span>WCAG 2.2</span>
+        <span>W3C RWD Standards</span>
+        <span>Baymard Institute UX Research</span>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+  </section>
+
+  <section class="how-section" id="howSection">
+    <div class="how-title">How it works</div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <div class="how-head">Paste your URL</div>
+        <div class="how-body">Enter any publicly accessible website URL into the analyzer.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <div class="how-head">AI Analysis</div>
+        <div class="how-body">Claude AI evaluates the site against 25+ RWD and UX research signals.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <div class="how-head">Get your score</div>
+        <div class="how-body">Receive a 0–100 score with category breakdowns and actionable issues.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="logo"><span class="logo-bracket">[</span>RWD<span class="logo-accent">Auditor</span><span class="logo-bracket">]</span></span>
+    <span class="footer-copy">Built with Claude AI · Responsive Web Design Research</span>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
