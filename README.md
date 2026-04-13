@@ -17,22 +17,6 @@ RWD Auditor takes any website URL and gives it a score out of 100, evaluated acr
 
  [View on GitHub Pages](https://rishita017.github.io/RWD-Auditor/)
 
-##  Tech Stack
-
-- Pure HTML, CSS, JavaScript — no frameworks
-- Claude AI API (Anthropic)
-- Google Fonts (Syne + DM Mono + DM Sans)
-- CSS animations & SVG ring chart
-
-##  Setup & GitHub Pages Deployment
-
-1. **Fork or clone** this repository
-2. Go to your repo → **Settings → Pages**
-3. Set source to `main` branch, `/ (root)` folder
-4. Your site will be live at `https://yourusername.github.io/rwd-auditor`
-
-> Note: The Claude AI API key is handled via Anthropic's browser proxy. No backend needed.
-
 ##  File Structure
 
 ```
