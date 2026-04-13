@@ -1,10 +1,10 @@
-# RWD Auditor 🔍
+# RWD Auditor 
 
 > AI-powered website quality analyzer — built for Responsive Web Design evaluation
 
 RWD Auditor takes any website URL and gives it a score out of 100, evaluated across 5 key dimensions of modern web design, backed by real UX research and RWD principles.
 
-## ✨ Features
+##  Features
 
 - **AI-Powered Analysis** via Claude AI
 - **5 Category Scoring**: Responsive Design, Typography, Page Structure, Performance, UX & Retention
@@ -13,18 +13,18 @@ RWD Auditor takes any website URL and gives it a score out of 100, evaluated acr
 - **Research-Backed** — Nielsen Norman Group, Google Core Web Vitals, WCAG 2.2, W3C RWD, Baymard Institute
 - **Fully Responsive** design (of course!)
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 [View on GitHub Pages](https://yourusername.github.io/rwd-auditor)
+ [View on GitHub Pages](https://yourusername.github.io/rwd-auditor)
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Pure HTML, CSS, JavaScript — no frameworks
 - Claude AI API (Anthropic)
 - Google Fonts (Syne + DM Mono + DM Sans)
 - CSS animations & SVG ring chart
 
-## 📦 Setup & GitHub Pages Deployment
+##  Setup & GitHub Pages Deployment
 
 1. **Fork or clone** this repository
 2. Go to your repo → **Settings → Pages**
@@ -33,7 +33,7 @@ RWD Auditor takes any website URL and gives it a score out of 100, evaluated acr
 
 > Note: The Claude AI API key is handled via Anthropic's browser proxy. No backend needed.
 
-## 📁 File Structure
+##  File Structure
 
 ```
 rwd-auditor/
@@ -43,7 +43,7 @@ rwd-auditor/
 └── README.md     # This file
 ```
 
-## 📊 Scoring Criteria
+##  Scoring Criteria
 
 | Category | What's Analyzed |
 |----------|----------------|
@@ -53,7 +53,7 @@ rwd-auditor/
 | Load Speed & Performance | Resource optimization, render-blocking, image handling |
 | UX & User Retention | CTA clarity, navigation UX, cognitive load, engagement signals |
 
-## 🎓 Research Sources
+##  Research Sources
 
 - [Nielsen Norman Group](https://www.nngroup.com/)
 - [Google Core Web Vitals](https://web.dev/vitals/)
@@ -63,4 +63,3 @@ rwd-auditor/
 
 ---
 
-Built with ❤️ using Claude AI
