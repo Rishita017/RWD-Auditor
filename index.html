@@ -1,123 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RWD Auditor — Website Quality Analyzer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RWD Auditor – Automated Responsive Web Design & UX Evaluation</title>
+<meta name="theme-color" content="#0b0d17">
+<meta name="description" content="Enter a URL and get a scored responsive web design, typography, structure, performance and UX audit.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
-
-  <nav>
-    <div class="logo"><span class="logo-bracket">[</span>RWD<span class="logo-accent">Auditor</span><span class="logo-bracket">]</span></div>
-    <div class="nav-tag">Powered by Claude AI</div>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-eyebrow">Research-Backed Website Analysis</div>
-    <h1 class="hero-title">Is your website<br/><span class="gradient-text">really</span> responsive?</h1>
-    <p class="hero-sub">Paste any URL and get an AI-powered audit against RWD principles, UX research, and retention-optimized design patterns.</p>
-
-    <div class="input-wrapper">
-      <span class="input-icon">⌁</span>
-      <input type="text" id="urlInput" placeholder="https://yourwebsite.com" autocomplete="off" spellcheck="false" />
-      <button id="auditBtn" onclick="startAudit()">
-        <span class="btn-text">Audit Now</span>
-        <span class="btn-arrow">→</span>
-      </button>
-    </div>
-    <div class="input-hint">Try: apple.com · wikipedia.org · any site you're curious about</div>
-
-    <div class="stats-row">
-      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Categories</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">25+</span><span class="stat-label">RWD Signals</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Powered Analysis</span></div>
-    </div>
-  </section>
-
-  <section class="loading-section" id="loadingSection" style="display:none">
-    <div class="loading-card">
-      <div class="loading-spinner"></div>
-      <div class="loading-status" id="loadingStatus">Initializing audit...</div>
-      <div class="loading-bar-wrap"><div class="loading-bar" id="loadingBar"></div></div>
-    </div>
-  </section>
-
-  <section class="results-section" id="resultsSection" style="display:none">
-
-    <div class="results-header">
-      <div class="audited-url" id="auditedUrl"></div>
-      <button class="re-audit-btn" onclick="resetAudit()">← New Audit</button>
-    </div>
-
-    <div class="score-hero">
-      <div class="score-ring-wrap">
-        <svg class="score-ring" viewBox="0 0 200 200">
-          <circle class="ring-bg" cx="100" cy="100" r="82"/>
-          <circle class="ring-fill" id="ringFill" cx="100" cy="100" r="82" stroke-dasharray="515" stroke-dashoffset="515"/>
-        </svg>
-        <div class="score-inner">
-          <div class="score-number" id="scoreNumber">0</div>
-          <div class="score-grade" id="scoreGrade">—</div>
-          <div class="score-label">/ 100</div>
-        </div>
-      </div>
-      <div class="score-meta">
-        <div class="score-verdict" id="scoreVerdict"></div>
-        <div class="score-summary" id="scoreSummary"></div>
-        <div class="score-badges" id="scoreBadges"></div>
-      </div>
-    </div>
-
-    <div class="categories-title">Detailed Breakdown</div>
-    <div class="categories-grid" id="categoriesGrid"></div>
-
-    <div class="research-footer">
-      <div class="research-title">Analysis backed by</div>
-      <div class="research-sources">
-        <span>Nielsen Norman Group</span>
-        <span>Google Core Web Vitals</span>
-        <span>WCAG 2.2</span>
-        <span>W3C RWD Standards</span>
-        <span>Baymard Institute UX Research</span>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="how-section" id="howSection">
-    <div class="how-title">How it works</div>
-    <div class="how-grid">
-      <div class="how-card">
-        <div class="how-num">01</div>
-        <div class="how-head">Paste your URL</div>
-        <div class="how-body">Enter any publicly accessible website URL into the analyzer.</div>
-      </div>
-      <div class="how-card">
-        <div class="how-num">02</div>
-        <div class="how-head">AI Analysis</div>
-        <div class="how-body">Claude AI evaluates the site against 25+ RWD and UX research signals.</div>
-      </div>
-      <div class="how-card">
-        <div class="how-num">03</div>
-        <div class="how-head">Get your score</div>
-        <div class="how-body">Receive a 0–100 score with category breakdowns and actionable issues.</div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <span class="logo"><span class="logo-bracket">[</span>RWD<span class="logo-accent">Auditor</span><span class="logo-bracket">]</span></span>
-    <span class="footer-copy">Built with Claude AI · Responsive Web Design Research</span>
-  </footer>
-
-  <script src="app.js"></script>
+<nav><span class="logo">RWD Auditor</span><span><a href="#how">How it works</a></span></nav>
+<main class="wrap">
+<section class="hero">
+<h1>Audit any site for <span>responsive design</span> &amp; UX</h1>
+<p class="sub">Enter a URL and get a score out of 100, a letter grade, five category sub-scores and severity-rated findings, all computed in your browser.</p>
+<div class="row"><input type="text" id="u" placeholder="example.com" aria-label="Website URL"><button id="go">Audit Now</button></div>
+</section>
+<section id="load"><div class="spin"></div><p style="text-align:center;color:var(--mut)" id="lt">Fetching HTML…</p></section>
+<section id="res" aria-live="polite"></section>
+<section id="how">
+<h2>How it works</h2>
+<div class="how"><div><b>1 · Normalize</b><br>Adds https:// if missing.</div><div><b>2 · Fetch</b><br>Tries up to three CORS proxies in turn.</div><div><b>3 · Parse</b><br>DOMParser builds a virtual DOM.</div><div><b>4 · Analyze</b><br>Five rule-based analyzers run.</div><div><b>5 · Score</b><br>Weighted average: 25 / 15 / 20 / 20 / 20.</div></div>
+<p style="color:var(--mut)">Each category starts at 100 and loses points per finding (a missing viewport tag costs 30, missing Open Graph tags cost 8), with a floor of 10. Checks are inspired by Nielsen Norman Group, Core Web Vitals, WCAG 2.2, W3C RWD guidance and Baymard research. Static HTML only: JavaScript-rendered content isn’t captured.</p>
+</section>
+</main>
+<footer>RWD Auditor · Project Based Learning · Rishita Jain · Manipal University Jaipur</footer>
+<script src="app.js"></script>
 </body>
 </html>
