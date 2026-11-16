@@ -1,6 +1,5 @@
 # RWD Auditor 
 
-> AI-powered website quality analyzer — built for Responsive Web Design evaluation
 
 RWD Auditor takes any website URL and gives it a score out of 100, evaluated across 5 key dimensions of modern web design, backed by real UX research and RWD principles.
 
